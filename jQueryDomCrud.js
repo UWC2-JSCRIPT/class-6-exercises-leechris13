@@ -1,3 +1,25 @@
+$( document ).ready(function() {
+    const $liItems = $('li');
+
+    //$liItems[2].className = 'highlight'
+    $('li:nth-of-type(3)').addClass("highlight")
+    const $img = $('img')
+    const imgColor = $img.data('color')
+    console.log(imgColor)
+    const $main = $('main')
+    const $para = $('p')
+    let $newAtt = $('<a>')
+    $newAtt.text('Buy Now!')
+    $newAtt.attr("id",'cta')
+
+    $main.append($newAtt)
+
+    $para.remove()
+
+    $newAtt.click(function() {
+        $newAtt.text('Added to cart')
+    })
+})
 // Create a new <a> element containing the text "Buy Now!"
 // with an id of "cta" after the last <p>
 
